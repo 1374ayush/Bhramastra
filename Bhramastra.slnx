@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/Common/" />
+  <Folder Name="/Framework/" />
+  <Folder Name="/Services/" />
+  <Folder Name="/Services/Product/">
+    <Project Path="Services/Product/Application/Application.csproj" Id="9e87437c-9f49-49d5-a909-57013cceff50" />
+    <Project Path="Services/Product/Domain/Domain.csproj" Id="c4062cf0-c21a-4e8d-b58a-ea7fd1a6b1bc" />
+    <Project Path="Services/Product/Infrastructure/Infrastructure.csproj" Id="e4905962-9e7b-41f4-9362-3311b583a1d2" />
+    <Project Path="Services/Product/Product/Product.Service.Api.csproj" />
+  </Folder>
+  <Folder Name="/Services/User/">
+    <Project Path="Services/User/Application/Application.csproj" Id="e0cb3861-935c-4ca2-8e15-73cea87ea5bb" />
+    <Project Path="Services/User/Domain/Domain.csproj" Id="58e113be-0fbb-4b79-9d95-b6d537f01b62" />
+    <Project Path="Services/User/Infrastructure/Infrastructure.csproj" Id="afa42565-5267-48c8-bb24-72c970132288" />
+    <Project Path="Services/User/User/User.Service.Api.csproj" />
+  </Folder>
+</Solution>
