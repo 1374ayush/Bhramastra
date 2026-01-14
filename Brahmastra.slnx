@@ -1,7 +1,4 @@
 <Solution>
-  <Folder Name="/Common/">
-    <Project Path="Common/Common.Aplication/Common.Aplication.csproj" Id="d5c237b0-dc5d-4bbc-9422-25bf563aaef0" />
-  </Folder>
   <Folder Name="/Framework/">
     <Project Path="Framework/Utils/Utils.csproj" Id="dc9e22f6-3a73-4642-8231-6bf90cd3c2d5" />
   </Folder>
