@@ -5,11 +5,11 @@ namespace Product.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class ProductController : ControllerBase
     {
         private readonly ProductDbContext dbContext;
 
-        public WeatherForecastController(ProductDbContext dbContext)
+        public ProductController(ProductDbContext dbContext)
         {
             this.dbContext = dbContext;
         }
