@@ -6,9 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Nudget\Persistence\Persistence.csproj" />
-    <ProjectReference Include="..\Application\Application.csproj" />
-  </ItemGroup>
-
 </Project>
