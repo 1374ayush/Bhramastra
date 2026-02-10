@@ -27,6 +27,5 @@
     <Project Path="Services/User/Application/Application.csproj" Id="e0cb3861-935c-4ca2-8e15-73cea87ea5bb" />
     <Project Path="Services/User/Domain/Domain.csproj" Id="58e113be-0fbb-4b79-9d95-b6d537f01b62" />
     <Project Path="Services/User/Infrastructure/Infrastructure/Infrastructure.csproj" />
-    <Project Path="Services/User/User/User.Service.Api.csproj" />
   </Folder>
 </Solution>
