@@ -11,8 +11,8 @@
   </Folder>
   <Folder Name="/Services/" />
   <Folder Name="/Services/Cart/">
+    <Project Path="Services/Cart/Api/Cart.Service.Api.csproj" />
     <Project Path="Services/Cart/Application/Application.csproj" Id="d0a24e61-8ebe-4afe-8f4b-b8eaf95c3b15" />
-    <Project Path="Services/Cart/Cart.Service.Api/Cart.Service.Api.csproj" Id="bf1ae0a7-2709-4b8d-84f2-6392d6d6370f" />
     <Project Path="Services/Cart/Domain/Domain.csproj" Id="0eeb5db7-31a3-4b63-a3d2-3098265da5d5" />
     <Project Path="Services/Cart/Infrastructure/Infrastructure.csproj" Id="f9ea6e31-3181-4938-9fc1-7d610ceaca02" />
   </Folder>
