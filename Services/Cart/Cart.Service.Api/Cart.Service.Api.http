@@ -1,0 +1,6 @@
+@Cart.Service.Api_HostAddress = http://localhost:5185
+
+GET {{Cart.Service.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

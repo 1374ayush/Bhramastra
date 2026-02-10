@@ -1,7 +1,21 @@
 <Solution>
-  <Folder Name="/Common/" />
-  <Folder Name="/Framework/" />
+  <Folder Name="/Common/">
+    <Project Path="Common/Common.Application/Common.Application.csproj" />
+    <Project Path="Common/Common.Domain/Common.Domain.csproj" />
+    <Project Path="Common/Common.Infrastructure/Common.Infrastructure.csproj" />
+    <Project Path="Common/Common.Service.Api/Common.Service.Api.csproj" />
+  </Folder>
+  <Folder Name="/Nudget/">
+    <Project Path="Nudget/Persistence/Persistence.csproj" />
+    <Project Path="Nudget/Utils/Utils.csproj" />
+  </Folder>
   <Folder Name="/Services/" />
+  <Folder Name="/Services/Cart/">
+    <Project Path="Services/Cart/Application/Application.csproj" Id="d0a24e61-8ebe-4afe-8f4b-b8eaf95c3b15" />
+    <Project Path="Services/Cart/Cart.Service.Api/Cart.Service.Api.csproj" Id="bf1ae0a7-2709-4b8d-84f2-6392d6d6370f" />
+    <Project Path="Services/Cart/Domain/Domain.csproj" Id="0eeb5db7-31a3-4b63-a3d2-3098265da5d5" />
+    <Project Path="Services/Cart/Infrastructure/Infrastructure.csproj" Id="f9ea6e31-3181-4938-9fc1-7d610ceaca02" />
+  </Folder>
   <Folder Name="/Services/Product/">
     <Project Path="Services/Product/Application/Application.csproj" Id="9e87437c-9f49-49d5-a909-57013cceff50" />
     <Project Path="Services/Product/Domain/Domain.csproj" Id="c4062cf0-c21a-4e8d-b58a-ea7fd1a6b1bc" />
@@ -11,7 +25,7 @@
   <Folder Name="/Services/User/">
     <Project Path="Services/User/Application/Application.csproj" Id="e0cb3861-935c-4ca2-8e15-73cea87ea5bb" />
     <Project Path="Services/User/Domain/Domain.csproj" Id="58e113be-0fbb-4b79-9d95-b6d537f01b62" />
-    <Project Path="Services/User/Infrastructure/Infrastructure.csproj" Id="afa42565-5267-48c8-bb24-72c970132288" />
+    <Project Path="Services/User/Infrastructure/Infrastructure/Infrastructure.csproj" />
     <Project Path="Services/User/User/User.Service.Api.csproj" />
   </Folder>
 </Solution>
