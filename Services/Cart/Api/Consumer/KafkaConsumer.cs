@@ -1,11 +1,15 @@
 ﻿using Confluent.Kafka;
+using Domain.Models.ConumerModels;
+using System.Text.Json;
 
 namespace Cart.Service.Api.Consumer;
 
-public static class KafkaConsumer
+public class KafkaConsumer : BackgroundService
 {
-    public static void ReadMessage()
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
+        await Task.Yield(); // allow app to finish starting
+
         var config = new ConsumerConfig
         {
             BootstrapServers = "localhost:9092",
@@ -14,23 +18,26 @@ public static class KafkaConsumer
             GroupId = "my-group",
             BrokerAddressFamily = BrokerAddressFamily.V4,
         };
-        using
-        var consumer = new ConsumerBuilder<Ignore,
-            string>(config).Build();
+
+        using var consumer = new ConsumerBuilder<Ignore,string>(config).Build();
         consumer.Subscribe("my-topic");
-        try
+
+        while (!stoppingToken.IsCancellationRequested)
         {
-            while (true)
+            try
             {
-                var consumeResult = consumer.Consume();
-                Console.WriteLine($"Message received from {consumeResult.TopicPartitionOffset}: {
-                        consumeResult.Message.Value }" );
-                }
-            } catch (OperationCanceledException) {
-                // The consumer was stopped via cancellation token.
-            } finally {
-                consumer.Close();
+                var consumeResult = consumer.Consume(TimeSpan.FromSeconds(5));
+                if (consumeResult == null) continue;
+
+                var result = JsonSerializer.Deserialize<User>(consumeResult.Message.Value);
+
+                Console.WriteLine($"Message received from {consumeResult.TopicPartitionOffset}: {result?.Id}, {result?.Name}, {result?.Email}");
             }
-            Console.ReadLine();
+            catch (OperationCanceledException)
+            {
+                // The consumer was stopped via cancellation token.
+                break;
+            }
         }
+    }
 }

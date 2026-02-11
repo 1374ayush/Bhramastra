@@ -11,8 +11,7 @@ namespace Cart.Service.Api.Controllers
     {
         [HttpGet("test")]
         public string Get()
-        {
-            KafkaConsumer.ReadMessage();    
+        {   
             return "value";
         }
     }
